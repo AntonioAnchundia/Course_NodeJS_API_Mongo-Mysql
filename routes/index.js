@@ -9,7 +9,7 @@ const removeExtension = (fileName) => {
     return fileName.split('.').shift() //Extrae solamente el nombre del archivo
 }
 
-const a = fs.readFileSync(PATH_ROUTES).filter((file) => {
+fs.readdirSync(PATH_ROUTES).filter((file) => {
     const name = removeExtension(file) //users, tracks, storages
     //Si es diferente del nombre del archivo index.js, se hace uso ese archivo
     if(name !== 'index'){
