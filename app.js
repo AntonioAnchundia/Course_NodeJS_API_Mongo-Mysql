@@ -5,6 +5,9 @@ const dbConnect = require('./config/mongo')
 const app = express()
 
 app.use(cors())
+app.use(express.json()) //Para que capture el json del post
+app.use(express.static()) //los recursos public e staticos quiero que lo saques de la carpeta storafe
+
 
 /**
  * Puerto en el que se va ejecutar
